@@ -1,0 +1,79 @@
+.carousel-container {
+  width: 500px;
+  margin: 40px auto;
+  user-select: none;
+}
+.carousel-frame {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-slides {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.carousel-slides > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 50px;
+  transition: background 0.2s;
+}
+.carousel-arrow.left {
+  left: 10px;
+}
+.carousel-arrow.right {
+  right: 10px;
+}
+.carousel-arrow:hover {
+  background: #444;
+}
+.carousel-dots {
+  text-align: center;
+  margin-top: 12px;
+}
+.carousel-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.carousel-dot.active {
+  background: #333;
+}
